@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='./scripts/script.js' defer type="module"></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+    </style>
+    <script 
+        src="https://kit.fontawesome.com/6d18dc06d5.js" 
+        crossorigin="anonymous"
+    ></script>
+    <title>Morse Code Translator</title>
+</head>
+<body>
+    <h1 id="heading">Morse Code Translator</h1>
+    <div class="container">
+        <div class="instructions">
+            <h3 class="title">Instructions:</h3>
+            <p id="instructions-txt">Select the direction of translation and input your text using keyboard.
+                <span>When inputting Morse code, a single space represents a space between characters, and ' / ' (i.e. space, forward slash, space) represents a space between words.</span>
+            </p>
+            <button type="button" class="collapsible">Morse code dictionary:</button>
+            <div class="content">
+                <p>  |A: .-   |B: -...   |C: -.-.   |D: -..   |E: .  
+                        |F: ..-.   |G: --.   |H: ....   |I: ..   |J: .---  
+                        |K: -.-   |L: .-..   |M: --   |N: -.   |O: ---  
+                        |P: .--.   |Q: --.-   |R: .-.   |S: ...   |T: -  
+                        |U: ..-   |V: ...-   |W: .--   |X: -..-   |Y: -.--  
+                        |Z: --..  
+                        |0: -----   |1: .----   |2: ..---   |3: ...--   |4: ....-  
+                        |5: .....   |6: -....   |7: --...   |8: ---..   |9: ----.  
+                        |.: .-.-.-   |,: --..--   |?: ..--..   |!: -.-.--  
+                        |:: ---...   |;: -.-.-.   |(: -.--.   |): -.--.-  
+                        |-: -....-   |/: -..-.   |@: .--.-.   |&: .-...  
+                </p>
+            </div>
+        </div>
+        <div class="translation-area">
+            <div class="direction">
+                <button id="btn1">English to Morse</button>
+                <button id="btn2">Morse to English</button>
+            </div>
+            <div class='text-container'>
+                <textarea class="eng" id="eng-txt" placeholder="Enter English text here."></textarea>
+                <button><i class="fa-solid fa-eraser" id="clear">Clear</i></button>            
+                <textarea class="morse" id="morse-txt" placeholder="Enter Morse code here."></textarea>
+            </div>
+        </div>
+        
+    </div>   
+</body>
+</html>
