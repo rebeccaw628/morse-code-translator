@@ -5,7 +5,7 @@ from './dictionary.js'
 
 export const engToMorse = (text, dictionary) => {
     return text.toUpperCase().trim()
-        .replace(/\s{2,}/g,' ')
+        .replace(/\s{2,}/g,' ') // removes double spacing and replaces with single space
         .split('')
         .map(char => {
             if (Object.keys(dictionary).includes(char)) {
