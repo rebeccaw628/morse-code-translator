@@ -17,6 +17,7 @@ export const engToMorse = (text, dictionary) => {
 };
 console.log(engToMorse('a b   c', morseMap));
 
+
 export const morseToEng = (text, dictionary) => {
     return text.trim()
                 .replace(/\s*\/\s*/g,' / ') // preserves ' / ' as word seperator

@@ -1,17 +1,18 @@
 :root {
-    --light: #F0F8FF;
+    --bg: #D3D3D3;
 }
 
 body {
-    background-color: var(--light);
+    background-color: var(--bg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Cutive Mono", monospace;
-    font-weight: 600;
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
-    border: solid 2px red;
 }
 .container {
     display: flex;
@@ -21,40 +22,55 @@ body {
 .instructions {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background-color: #f5f5f5;
+    justify-content: space-around;
+    /* align-items: flex-end; */
+    /* background-color: #f5f5f5; */
+    /* border-radius: 25px;
+    padding: 10px; */
+    text-align: center;
     /* border: solid 2px green; */
 }
-.collapsible {
-    background-color: #c4b69e;
-    font-family: "Poppins", sans-serif;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: 10px;
-    text-align: left;
-    outline: none;
-    font-size: 10px;
-  }
-  .active, .collapsible:hover {
-    background-color: #dbd2c3;
-  }
+.instructions-title{
+    margin: 18px 0 0 0;
+}
+.emphasise {
+    text-shadow: 0.5px 0.5px 0px rgb(113, 114, 116);
+    font-weight: 600;
+}
   .content {
     padding: 0 18px;
     display: none;
     background-color: #f1f1f1;
   }
-  .translation-area {
+  .translation-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .direction {
+  .buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 6px;
   }
-  .text-container {
+  .buttons > button {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 25px;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(56, 55, 56, 0.4) 
+  }
+  .buttons > button:hover {
+    background-color: black;
+    color: #f5f5f5;
+  }  
+  button:active {
+    box-shadow: grey 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  .input-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,3 +90,24 @@ body {
   .input:hover {
     border: solid 2px rgb(48, 122, 190);
   }
+  .clearBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 25px;
+    padding: 8px;
+  }
+  .clearBtn:hover {
+    background-color: rgb(224, 91, 91);
+  }
+
+
+.clicked {
+    background-color: rgb(125, 192, 125);
+    color: white;
+}
