@@ -15,6 +15,8 @@ const btnClear = document.querySelector('.clearBtn')
 
 
 const translation = (inputField, outputField, translateFn, dictionary) => {
+    let currentInputhandler = null;
+
     return function() {
         //Update DOM to reflect translation direction
         inputField.readOnly = false;
@@ -25,9 +27,9 @@ const translation = (inputField, outputField, translateFn, dictionary) => {
         outputField.value = 'Translated text will appear here';
 
         //Remove any previous event listener
-        inputField.removeEventListener('input', inputField.inputHandler)
+        inputField.removeEventListener('input', currentInputhandler)
 
-        inputField.inputHandler = function (e) {
+        currentInputhandler = function (e) {
             if (inputField.value.trim() === '') {
                 outputField.value = '';
             }
@@ -35,7 +37,7 @@ const translation = (inputField, outputField, translateFn, dictionary) => {
                 outputField.value = translateFn(inputField.value, dictionary)
             }
         }
-        inputField.addEventListener('input', inputField.inputHandler);
+        inputField.addEventListener('input', currentInputhandler);
     }
 }
 
